@@ -1,22 +1,18 @@
 import React, {Component} from 'react';
-import BitcoinService from "../../services/BitcoinService";
 import Graph from "../../components/Graph/Graph";
+import {connect} from "react-redux";
+import {loadConfirmedTransactions, loadMarketPrice} from "../../modules/bitcoin/actions";
 
 
 class Statistics extends Component {
 
-    async componentDidMount() {
-        this.setState({marketPrice: await BitcoinService.getMarketPrice()});
-        this.setState({confirmedTransactions: await BitcoinService.getConfirmedTransactions()});
+    componentDidMount() {
+        this.props.loadMarketPrice();
+        this.props.loadConfirmedTransactions();
     }
 
-    state = {
-        marketPrice: undefined,
-        confirmedTransactions: undefined
-    };
-
     render() {
-        const {marketPrice, confirmedTransactions} = this.state;
+        const {marketPrice, confirmedTransactions} = this.props;
         return (
             <div>
                 {marketPrice && <Graph data={marketPrice}
@@ -35,4 +31,19 @@ class Statistics extends Component {
     }
 }
 
-export default Statistics;
+const mapStateToProps = (state) => {
+    return {
+        marketPrice: state.bitcoinStore.marketPrice,
+        confirmedTransactions: state.bitcoinStore.confirmedTransactions
+    }
+};
+
+const mapDispatchToProps = {
+    loadMarketPrice,
+    loadConfirmedTransactions
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Statistics)

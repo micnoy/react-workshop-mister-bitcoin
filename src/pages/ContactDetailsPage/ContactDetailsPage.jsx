@@ -1,29 +1,28 @@
 import React, {Component} from 'react';
-import ContactService from "../../services/ContactService";
+import ContactService from "../../modules/contact/ContactService";
 import {Link} from "react-router-dom";
-import avatar from "../../assets/man.svg";
 import Avatar from "../../components/Avatar/Avatar";
 
+import {connect} from "react-redux";
+import {loadCurrentContact} from "../../modules/contact/actions";
+
 class ContactDetailsPage extends Component {
+
     componentDidMount() {
         const contactId = this.props.match.params.id;
-        ContactService.getContactById(contactId).then((value) => this.setState({contact: value}));
+        console.log('loading id', contactId);
+        this.props.loadCurrentContact(contactId);
     }
-
-    state = {
-        contact: ''
-    };
 
     deleteContact = (id) => {
         ContactService.deleteContact(id).then(() => this.props.history.goBack());
     };
 
     render() {
-        const {contact} = this.state;
+        const {contact} = this.props;
 
-        return (
+        return (contact?
             <div>
-                <h1>Contact details page</h1>
                 <Avatar contact={contact}/>
                 <h3>Name</h3>
                 <h6>{contact.name}</h6>
@@ -38,14 +37,32 @@ class ContactDetailsPage extends Component {
                     <button>Edit</button>
                 </Link>
 
-                <button onClick={()=>this.deleteContact(contact._id)}>Delete</button>
+                <button onClick={() => this.deleteContact(contact._id)}>Delete</button>
 
                 <Link to={'/contact/'}>
                     <button>Cancel</button>
                 </Link>
-            </div>
+            </div>:
+            (
+                <div>
+                    <h1>Contact does not exist</h1>
+                </div>)
         );
     }
 }
 
-export default ContactDetailsPage;
+const mapStateToProps = (state) => {
+    console.log('state ', state);
+    return {
+        contact: state.contactStore.currentContact
+    }
+};
+
+const mapDispatchToProps = {
+    loadCurrentContact
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ContactDetailsPage);

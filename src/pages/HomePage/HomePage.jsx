@@ -1,21 +1,18 @@
 import React, {Component} from 'react';
-import UserService from "../../services/UserService";
-import BitcoinService from "../../services/BitcoinService";
+import {connect} from 'react-redux'
+
+import {loadBitcoinRate} from "../../modules/bitcoin/actions";
+import {loadUser} from "../../modules/user/actions";
 
 class HomePage extends Component {
 
-    async componentDidMount() {
-        this.setState({rate: await BitcoinService.getRate()});
-        this.setState({user: UserService.getUser()});
+    componentDidMount() {
+        this.props.loadBitcoinRate();
+        this.props.loadUser();
     }
 
-    state = {
-        rate: '',
-        user: undefined
-    };
-
     render() {
-        const {user, rate} = this.state;
+        const {user, rate} = this.props;
         return (
             <div>
                 {user && <h1>Hello {user.name} !</h1>}
@@ -26,4 +23,19 @@ class HomePage extends Component {
     }
 }
 
-export default HomePage;
+const mapStateToProps = (state) => {
+    return {
+        rate: state.bitcoinStore.rate,
+        user: state.userStore.user
+    };
+};
+
+const mapDispatchToProps = {
+    loadBitcoinRate,
+    loadUser
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(HomePage);

@@ -1,13 +1,8 @@
 import React, {Component} from 'react';
-import ContactService from "../../services/ContactService";
 import ContactPreview from "../ContactPreview/ContactPreview";
 
 
 export default class ContactList extends Component {
-
-    state = {
-        contacts: ''
-    };
 
     getContactItem = (index, item, filter) => {
         if (filter) {
@@ -25,14 +20,8 @@ export default class ContactList extends Component {
         }
     };
 
-    componentDidMount() {
-        ContactService.getContacts().then(value => {
-            this.setState({contacts: value});
-        });
-    }
-
     render() {
-        const {contacts} = this.state;
+        const {contacts} = this.props;
         const {filter} = this.props;
 
         return <div>

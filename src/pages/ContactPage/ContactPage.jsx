@@ -2,8 +2,14 @@ import React, {Component} from 'react';
 import ContactList from "../../components/ContactList/ContactList";
 import {Link} from "react-router-dom";
 import ContactsFilter from "../../components/ContactFilter/ContactFilter";
+import {loadContacts} from "../../modules/contact/actions";
+import {connect} from 'react-redux'
 
 class ContactPage extends Component {
+    componentDidMount() {
+        this.props.loadContacts();
+    }
+
     state = {
         filter: '',
     };
@@ -14,16 +20,30 @@ class ContactPage extends Component {
     };
 
     render() {
+        const {contacts} = this.props;
         return (
             <div>
                 <ContactsFilter onFilter={this.filterChanged}/>
                 <Link to={'/contact/edit/'}>
                     <h3>Add new contact</h3>
                 </Link>
-                <ContactList filter={this.state.filter}/>
+                <ContactList contacts={contacts} filter={this.state.filter}/>
             </div>
         );
     }
 }
 
-export default ContactPage;
+const mapStateToProps = (state) => {
+    return {
+        contacts: state.contactStore.contacts
+    }
+};
+
+const mapDispatchToProps = {
+    loadContacts
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ContactPage)
