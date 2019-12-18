@@ -1,14 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class ContactsFilter extends Component {
-    render() {
-        const {onFilter} = this.props;
-        return (
-            <div>
-                <input placeholder='Search for contact' onChange={(ev) => onFilter(ev)}/>
-            </div>
-        );
-    }
-}
+const ContactsFilter = (props) => {
+    const {onFilter} = props;
+    return (
+        <input placeholder='Search for contact' onChange={(ev) => onFilter(ev)}/>
+    );
+};
 
 export default ContactsFilter;

@@ -1,15 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Avatar extends Component {
-    render() {
-        const {contact} = this.props;
-        const contactImage = 'https://robohash.org/' + contact._id;
-        return (
-            <div>
-                <img className={'avatar'} src={contactImage} alt=''/>
-            </div>
-        );
-    }
-}
+const Avatar = (props) => {
+    const {contact} = props;
+    const contactImage = 'https://robohash.org/' + contact._id;
+    return (
+        <img className={'avatar'} src={contactImage} alt=''/>
+    );
+};
 
 export default Avatar;

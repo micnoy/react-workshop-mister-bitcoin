@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import ContactService from "../../services/ContactService";
-import ContactItem from "../ContactItem";
+import ContactPreview from "../ContactPreview/ContactPreview";
 
 
-class ContactList extends Component {
+export default class ContactList extends Component {
+
     state = {
         contacts: ''
     };
@@ -13,13 +14,13 @@ class ContactList extends Component {
             if (item.name.toLowerCase().includes(filter.toLowerCase())) {
                 return (
                     <li key={index}>
-                        <ContactItem contact={item}/>
+                        <ContactPreview contact={item}/>
                     </li>);
             }
         } else {
             return (
                 <li key={index}>
-                    <ContactItem contact={item}/>
+                    <ContactPreview contact={item}/>
                 </li>);
         }
     };
@@ -41,5 +42,3 @@ class ContactList extends Component {
         </div>;
     }
 }
-
-export default ContactList;
