@@ -3,7 +3,7 @@
   "short_name": "Mister bitcode",
   "theme_color": "#2196f3",
   "background_color": "#369d49",
-  "display": "standalone",
+  "display": "fullscreen",
   "orientation": "portrait",
   "Scope": "/",
   "prefer_related_applications": false,
