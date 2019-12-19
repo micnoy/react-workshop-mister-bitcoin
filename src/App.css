@@ -72,3 +72,7 @@ a {
 .headerNav{
     padding: 30px;
 }
+
+#setup_button {
+    display: none;
+}
