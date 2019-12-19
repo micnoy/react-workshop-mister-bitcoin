@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-workshop-mister-bitcoin/static/css/main.7df392c2.chunk.css",
+    "main.js": "/react-workshop-mister-bitcoin/static/js/main.7fc32ef8.chunk.js",
+    "main.js.map": "/react-workshop-mister-bitcoin/static/js/main.7fc32ef8.chunk.js.map",
+    "runtime-main.js": "/react-workshop-mister-bitcoin/static/js/runtime-main.d675515a.js",
+    "runtime-main.js.map": "/react-workshop-mister-bitcoin/static/js/runtime-main.d675515a.js.map",
+    "static/js/2.40531a1e.chunk.js": "/react-workshop-mister-bitcoin/static/js/2.40531a1e.chunk.js",
+    "static/js/2.40531a1e.chunk.js.map": "/react-workshop-mister-bitcoin/static/js/2.40531a1e.chunk.js.map",
+    "index.html": "/react-workshop-mister-bitcoin/index.html",
+    "precache-manifest.ae91d0dac47ff76307b88d120f496aa5.js": "/react-workshop-mister-bitcoin/precache-manifest.ae91d0dac47ff76307b88d120f496aa5.js",
+    "service-worker.js": "/react-workshop-mister-bitcoin/service-worker.js",
+    "static/css/main.7df392c2.chunk.css.map": "/react-workshop-mister-bitcoin/static/css/main.7df392c2.chunk.css.map",
+    "static/js/2.40531a1e.chunk.js.LICENSE": "/react-workshop-mister-bitcoin/static/js/2.40531a1e.chunk.js.LICENSE",
+    "static/media/ic-contacts.svg": "/react-workshop-mister-bitcoin/static/media/ic-contacts.c56851b8.svg",
+    "static/media/ic-home.svg": "/react-workshop-mister-bitcoin/static/media/ic-home.5924881c.svg",
+    "static/media/ic-statistics.svg": "/react-workshop-mister-bitcoin/static/media/ic-statistics.2e8a0200.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d675515a.js",
+    "static/js/2.40531a1e.chunk.js",
+    "static/css/main.7df392c2.chunk.css",
+    "static/js/main.7fc32ef8.chunk.js"
+  ]
+}
