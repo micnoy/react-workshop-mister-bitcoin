@@ -3,10 +3,11 @@
   "short_name": "Mister bitcode",
   "theme_color": "#2196f3",
   "background_color": "#369d49",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
-  "start_url": "/",
+  "prefer_related_applications": false,
+  "start_url": "./index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
