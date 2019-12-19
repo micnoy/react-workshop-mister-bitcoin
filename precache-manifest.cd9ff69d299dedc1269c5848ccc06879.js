@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "17ccb1658bbcce0e08fc3a2ddba35a65",
+    "revision": "85f1f84be57f1d0b600f8b324d3e2c01",
     "url": "/react-workshop-mister-bitcoin/index.html"
   },
   {
-    "revision": "de71c6ee66681aacb53b",
-    "url": "/react-workshop-mister-bitcoin/static/css/main.7df392c2.chunk.css"
+    "revision": "c647e8d2c711751ceee4",
+    "url": "/react-workshop-mister-bitcoin/static/css/main.a6d93794.chunk.css"
   },
   {
     "revision": "52aab5e1431e24836a15",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-workshop-mister-bitcoin/static/js/2.40531a1e.chunk.js.LICENSE"
   },
   {
-    "revision": "de71c6ee66681aacb53b",
-    "url": "/react-workshop-mister-bitcoin/static/js/main.7fc32ef8.chunk.js"
+    "revision": "c647e8d2c711751ceee4",
+    "url": "/react-workshop-mister-bitcoin/static/js/main.087485cf.chunk.js"
   },
   {
     "revision": "711478b81238108eeb45",
