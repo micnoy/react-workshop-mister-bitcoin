@@ -8,13 +8,13 @@ export default class ContactList extends Component {
         if (filter) {
             if (item.name.toLowerCase().includes(filter.toLowerCase())) {
                 return (
-                    <li key={index}>
+                    <li className='contact-item' key={index}>
                         <ContactPreview contact={item}/>
                     </li>);
             }
         } else {
             return (
-                <li key={index}>
+                <li className='contact-item' key={index}>
                     <ContactPreview contact={item}/>
                 </li>);
         }
