@@ -22,13 +22,13 @@ class ContactPage extends Component {
     render() {
         const {contacts} = this.props;
         return (
-            <div>
+            <section className="nav-page">
                 <ContactsFilter onFilter={this.filterChanged}/>
                 <Link to={'/contact/edit/'}>
                     <h3>Add new contact</h3>
                 </Link>
                 <ContactList contacts={contacts} filter={this.state.filter}/>
-            </div>
+            </section>
         );
     }
 }

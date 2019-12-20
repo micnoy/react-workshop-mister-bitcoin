@@ -14,8 +14,9 @@ class Statistics extends Component {
     render() {
         const {marketPrice, confirmedTransactions} = this.props;
         return (
-            <div>
-                {marketPrice && <Graph data={marketPrice}
+            <section className="nav-page">
+                {marketPrice && <Graph className='Graph'
+                                       data={marketPrice}
                                        chartName='Market price (USD)'
                                        backgroundColor={'rgba(47,54,192,0.4)'}
                                        borderColor={'rgb(47,54,192,1)'}/>}
@@ -26,7 +27,7 @@ class Statistics extends Component {
                                                  backgroundColor={'rgba(55,122,40,0.4)'}
                                                  borderColor={'rgb(55,122,40,1)'}/>}
                 <h4>The number of daily confirmed bitcoin transactions.</h4>
-            </div>
+            </section>
         );
     }
 }

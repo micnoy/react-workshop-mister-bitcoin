@@ -7,7 +7,7 @@ const ContactPreview = (props) => {
     return (
         <Link to={'/contact/' + contact._id} className="item-content">
                 <Avatar contact={contact}/>
-                <h2>{contact.name}</h2>
+                <div className='contact-name'>{contact.name}</div>
         </Link>
     );
 };

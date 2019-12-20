@@ -1,33 +1,38 @@
 import React, {Component} from 'react';
 import ContactService from "../../modules/contact/ContactService";
-import {loadCurrentContact} from "../../modules/contact/actions";
+import {clearCurrentContact, loadCurrentContact} from "../../modules/contact/actions";
 import {connect} from "react-redux";
 
 class ContactEditPage extends Component {
 
-    // contactBeingEdited = null;
-
     componentDidMount() {
         const contactId = this.props.match.params.id;
-        this.props.loadCurrentContact(contactId);
+        console.log('contactId',contactId)
+        if (contactId) {
+            this.props.loadCurrentContact(contactId);
+        }
+    }
+
+    componentWillUnmount() {
+        this.props.clearCurrentContact();
     }
 
     render() {
         const {contact} = this.props;
-        return(contact &&
+        return (
             <form>
                 <h1>Edit contact page</h1>
                 <h3>Name</h3>
                 <input type='text' onChange={(ev) => this.propertyChanged(ev, 'name')}
-                       defaultValue={contact.name}/>
+                       defaultValue={contact && contact.name}/>
 
                 <h3>Phone</h3>
                 <input type='phone' onChange={(ev) => this.propertyChanged(ev, 'phone')}
-                       defaultValue={contact.phone}/>
+                       defaultValue={contact && contact.phone}/>
 
                 <h3>Email</h3>
                 <input type='email' onChange={(ev) => this.propertyChanged(ev, 'email')}
-                       defaultValue={contact.email}/>
+                       defaultValue={contact && contact.email}/>
                 <div>
                     <button onClick={this.goBack}>Cancel</button>
                     <button onClick={this.saveContact}>{contact ? 'Save' : 'Add'}</button>
@@ -37,7 +42,7 @@ class ContactEditPage extends Component {
 
     propertyChanged = (ev, field) => {
         ev.persist();
-        if(!this.contactBeingEdited) {
+        if (!this.contactBeingEdited) {
             this.contactBeingEdited = {...this.props.contact};
         }
         this.contactBeingEdited[field] = ev.target.value;
@@ -46,12 +51,12 @@ class ContactEditPage extends Component {
 
     saveContact = () => {
         ContactService.saveContact(this.contactBeingEdited).then(() => {
-            this.props.history.go(-2);
+            this.props.history.goBack();
         });
     };
 
     goBack = () => {
-        // this.props.history.goBack();
+        this.props.history.goBack();
     };
 }
 
@@ -62,7 +67,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-    loadCurrentContact
+    loadCurrentContact,
+    clearCurrentContact
 };
 
 export default connect(

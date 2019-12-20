@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import Avatar from "../../components/Avatar/Avatar";
 
 import {connect} from "react-redux";
-import {loadCurrentContact} from "../../modules/contact/actions";
+import {clearCurrentContact, loadCurrentContact} from "../../modules/contact/actions";
 
 class ContactDetailsPage extends Component {
 
@@ -12,6 +12,10 @@ class ContactDetailsPage extends Component {
         const contactId = this.props.match.params.id;
         console.log('loading id', contactId);
         this.props.loadCurrentContact(contactId);
+    }
+
+    componentWillUnmount() {
+        this.props.clearCurrentContact();
     }
 
     deleteContact = (id) => {
@@ -59,7 +63,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-    loadCurrentContact
+    loadCurrentContact,
+    clearCurrentContact
 };
 
 export default connect(

@@ -14,11 +14,11 @@ class HomePage extends Component {
     render() {
         const {user, rate} = this.props;
         return (
-            <div>
-                {user && <h1>Hello {user.name} !</h1>}
-                {user && <h2>Coins: {user.coins}</h2>}
-                {rate && <h2>BTC: {rate}</h2>}
-            </div>
+            <section className="nav-page">
+                {user && <h3>{user.name}</h3>}
+                {user && <h3>Coins: {user.coins}</h3>}
+                {rate && <h3>BTC: {rate}</h3>}
+            </section>
         );
     }
 }
