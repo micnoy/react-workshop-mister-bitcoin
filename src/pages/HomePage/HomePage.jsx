@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 
 import {loadBitcoinRate} from "../../modules/bitcoin/actions";
 import {loadUser} from "../../modules/user/actions";
+import TransactionsList from "../../components/TransactionsList/TransactionsList";
 
 class HomePage extends Component {
 
@@ -18,6 +19,7 @@ class HomePage extends Component {
                 {user && <h3>{user.name}</h3>}
                 {user && <h3>Coins: {user.coins}</h3>}
                 {rate && <h3>BTC: {rate}</h3>}
+                <TransactionsList/>
             </section>
         );
     }

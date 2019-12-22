@@ -95,3 +95,20 @@ a {
 .nav-page {
     margin-top: 110px;
 }
+
+.transactions-list{
+    padding: 10px;
+    background: #f0f0f0;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.transactions-list ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+}
+
+.transactions-item{
+    /*display: flex;*/
+}
