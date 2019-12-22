@@ -7,7 +7,7 @@ import HeaderItem from "../HeaderItem/HeaderItem";
 
 const Header = () => {
     return (
-        <header>
+        <header className='app-header'>
             <Link to={'/'}>
                 <HeaderItem text='Home' icon={homeIcon}/>
             </Link>

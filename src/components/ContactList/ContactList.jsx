@@ -17,7 +17,7 @@ export default class ContactList extends Component {
 
     singleContact(index, item) {
         return (
-            <li key={index}>
+            <li className='li-item-container' key={index}>
                 <ContactPreview contact={item}/>
             </li>);
     }

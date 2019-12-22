@@ -26,7 +26,7 @@ class ContactDetailsPage extends Component {
         const {contact} = this.props;
 
         return (contact?
-            <div>
+            <div className='nav-page'>
                 <Avatar contact={contact}/>
                 <h3>Name</h3>
                 <h6>{contact.name}</h6>

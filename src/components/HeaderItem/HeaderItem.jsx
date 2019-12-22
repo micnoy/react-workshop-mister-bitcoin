@@ -7,7 +7,7 @@ class HeaderItem extends Component {
         return (
             <div className='header-item'>
                 <img src={icon} alt=''/>
-                <div className={'App-header-div'}>{text}</div>
+                <div className={'header-item-text'}>{text}</div>
             </div>
         );
     }

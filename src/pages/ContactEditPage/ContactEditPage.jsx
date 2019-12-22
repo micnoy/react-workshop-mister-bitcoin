@@ -20,7 +20,7 @@ class ContactEditPage extends Component {
     render() {
         const {contact} = this.props;
         return (
-            <form>
+            <form className='nav-page'>
                 <h1>Edit contact page</h1>
                 <h3>Name</h3>
                 <input type='text' onChange={(ev) => this.propertyChanged(ev, 'name')}
