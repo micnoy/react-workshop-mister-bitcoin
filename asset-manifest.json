@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/react-workshop-mister-bitcoin/static/css/main.a6d93794.chunk.css",
-    "main.js": "/react-workshop-mister-bitcoin/static/js/main.087485cf.chunk.js",
-    "main.js.map": "/react-workshop-mister-bitcoin/static/js/main.087485cf.chunk.js.map",
+    "main.css": "/react-workshop-mister-bitcoin/static/css/main.eef560f8.chunk.css",
+    "main.js": "/react-workshop-mister-bitcoin/static/js/main.569c69fa.chunk.js",
+    "main.js.map": "/react-workshop-mister-bitcoin/static/js/main.569c69fa.chunk.js.map",
     "runtime-main.js": "/react-workshop-mister-bitcoin/static/js/runtime-main.d675515a.js",
     "runtime-main.js.map": "/react-workshop-mister-bitcoin/static/js/runtime-main.d675515a.js.map",
-    "static/js/2.40531a1e.chunk.js": "/react-workshop-mister-bitcoin/static/js/2.40531a1e.chunk.js",
-    "static/js/2.40531a1e.chunk.js.map": "/react-workshop-mister-bitcoin/static/js/2.40531a1e.chunk.js.map",
+    "static/js/2.03097cd1.chunk.js": "/react-workshop-mister-bitcoin/static/js/2.03097cd1.chunk.js",
+    "static/js/2.03097cd1.chunk.js.map": "/react-workshop-mister-bitcoin/static/js/2.03097cd1.chunk.js.map",
     "index.html": "/react-workshop-mister-bitcoin/index.html",
-    "precache-manifest.cd9ff69d299dedc1269c5848ccc06879.js": "/react-workshop-mister-bitcoin/precache-manifest.cd9ff69d299dedc1269c5848ccc06879.js",
+    "precache-manifest.9f51fddf6420930c177b1554d1c2539e.js": "/react-workshop-mister-bitcoin/precache-manifest.9f51fddf6420930c177b1554d1c2539e.js",
     "service-worker.js": "/react-workshop-mister-bitcoin/service-worker.js",
-    "static/css/main.a6d93794.chunk.css.map": "/react-workshop-mister-bitcoin/static/css/main.a6d93794.chunk.css.map",
-    "static/js/2.40531a1e.chunk.js.LICENSE": "/react-workshop-mister-bitcoin/static/js/2.40531a1e.chunk.js.LICENSE",
+    "static/css/main.eef560f8.chunk.css.map": "/react-workshop-mister-bitcoin/static/css/main.eef560f8.chunk.css.map",
+    "static/js/2.03097cd1.chunk.js.LICENSE": "/react-workshop-mister-bitcoin/static/js/2.03097cd1.chunk.js.LICENSE",
     "static/media/ic-contacts.svg": "/react-workshop-mister-bitcoin/static/media/ic-contacts.c56851b8.svg",
     "static/media/ic-home.svg": "/react-workshop-mister-bitcoin/static/media/ic-home.5924881c.svg",
     "static/media/ic-statistics.svg": "/react-workshop-mister-bitcoin/static/media/ic-statistics.2e8a0200.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d675515a.js",
-    "static/js/2.40531a1e.chunk.js",
-    "static/css/main.a6d93794.chunk.css",
-    "static/js/main.087485cf.chunk.js"
+    "static/js/2.03097cd1.chunk.js",
+    "static/css/main.eef560f8.chunk.css",
+    "static/js/main.569c69fa.chunk.js"
   ]
 }
